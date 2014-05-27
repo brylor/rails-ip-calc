@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  network: MyString
+  firstaddr: MyString
+  bcastaddr: MyString
+  mask: MyString
+
+two:
+  network: MyString
+  firstaddr: MyString
+  bcastaddr: MyString
+  mask: MyString

@@ -1,0 +1,32 @@
+<h1>Listing subnets</h1>
+
+<table>
+  <tr>
+    <th>Network</th>
+    <th>System</th>
+    <th>Firstaddr</th>
+    <th>Bcastaddr</th>
+    <th>Mask</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @subnets.each do |subnet| %>
+  <tr>
+    <td><%= subnet.network %></td>
+    <td><%= subnet.system.name %></td>
+    <td><%= subnet.firstaddr %></td>
+    <td><%= subnet.bcastaddr %></td>
+    <td><%= subnet.mask %></td>
+    <td><%= link_to 'Subnet', network_path(subnet)  %></td>
+    <td><%= link_to 'Show', subnet %></td>
+    <td><%= link_to 'Edit', edit_subnet_path(subnet) %></td>
+    <td><%= link_to 'Destroy', subnet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subnet', new_subnet_path %>
